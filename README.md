@@ -81,4 +81,5 @@ Replace `target` with a valid email adress to send the code.
 ================================================================
 
 `verify.verify(Code, correct, incorrect)`
+
 Ok, so the computer will look at the `Code` paramter and check if it matches the code sent. The `correct` parameter is actually a function. if the code matches the code sent, then this function will get executed. Same thing for the `incorrect` function except that will get executed if the code sent does not match the one the user put in.
