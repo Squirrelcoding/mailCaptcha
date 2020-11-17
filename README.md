@@ -66,3 +66,13 @@ rl.question("Enter your email:", ans => {
 })
 ```
 **Run the code and you are done!**
+
+# Keywords
+`verify.authentication(yourEmail, yourPassword)`
+Use this code to authenticate the account that will send the code! To do this you must also turn off less secure apps [here](https://myaccount.google.com/u/1/lesssecureapps?pli=1&rapt=AEjHL4O5Q6vEvF1y1Mjg3JuVU_VP1TaUoGdovZpX-6vKFwhFR6FZBypztEYxFK21xAPmpoGVr2vbWwMgluP9npdP72XVpInavw).
+
+`verify.sendCode(target)`
+Replace `target` with a valid email adress to send the code.
+
+`verify.verify(Code, correct, incorrect)`
+Ok, so the computer will look at the `Code` paramter and check if it matches the code sent. The `correct` parameter is actually a function. if the code matches the code sent, then this function will get executed. Same thing for the `incorrect` function except that will get executed if the code sent does not match the one the user put in.
