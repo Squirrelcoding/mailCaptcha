@@ -21,7 +21,7 @@ Almost forgot! So here is the code:
 **Install/require**
 Just add the `Verify.js` file, and enter the code:
 ```js
-var verify = require('./verify.js') 
+var verify = require('./easyCaptcha.js') 
 //Not published yet
 ```
 **Require readline**
