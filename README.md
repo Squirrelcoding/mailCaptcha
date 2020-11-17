@@ -15,7 +15,7 @@ So basically it uses Nodemailer and a random number generator to send a random 6
 Check it out on [repli.it](https://repl.it/@Squirrel777/Captcha#index.js)
 
 
-# Examples
+# How to use!
 Almost forgot! So here is the code:
 
 **Install/require**
