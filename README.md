@@ -1,5 +1,5 @@
-# easyCaptcha
-easycaptcha is a Nodejs library that helps people by using a captcha.
+# mailCaptcha
+mailCaptcha is a Nodejs library that helps people by using a captcha.
 
 # how it works
 So basically it uses Nodemailer and a random number generator to send a random 6 digit code to the user. **No, it does not send your passwords and account data to me!, *feel free to inspect the code!***
@@ -12,17 +12,17 @@ So basically it uses Nodemailer and a random number generator to send a random 6
 # Credits
 - Me.
 
-Check it out on [repli.it](https://repl.it/@Squirrel777/Captcha#index.js)
+Check it out on [repl.it](https://repl.it/@Squirrel777/Captcha#index.js)
 
 
 # How to use!
 Almost forgot! So here is the code:
 
 **Install/require**
-Just add the `Verify.js` file, and enter the code:
+
+NOTE: INSTALL NODEMAILER OR THIS WILL NOT WORK!
 ```js
-var verify = require('./easyCaptcha.js') 
-//Not published yet
+var verify = require('mailcaptcha.js') 
 ```
 **Require readline**
 Require `readline` to use as input
