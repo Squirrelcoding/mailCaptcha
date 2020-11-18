@@ -22,7 +22,7 @@ Almost forgot! So here is the code:
 
 NOTE: INSTALL NODEMAILER OR THIS WILL NOT WORK!
 ```js
-var verify = require('mailcaptcha.js') 
+var verify = require('mailcaptcha') 
 ```
 **Require readline**
 Require `readline` to use as input
