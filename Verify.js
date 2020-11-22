@@ -34,6 +34,9 @@ function randint(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 var code = randint(100000, 1000000);
+exports.createCode = function createCustomCode(customCode) {
+   code = customCode
+}
 exports.authentication = function authentication(email, password) {
 transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -62,11 +65,11 @@ exports.sendCode = function sendCode(target) {
     }*/
   });
 }
-exports.verify = function verify(inputCode) {
+exports.verify = function verify(inputCode, ifCorrectFunction, ifIncorretFunction) {
   if (inputCode == code) {
-    console.log("Verified!")
+   ifCorrectFunction();
   }
   else {
-    console.log('Incorrect code.')
+    ifIncorretFunction();
 }
 }
