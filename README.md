@@ -7,8 +7,7 @@ So basically it uses Nodemailer and a random number generator to send a random 6
 # Upcoming Updates
 - Adding support to `alert` and `prompt`
 
-- Adding support for custom verification codes, instead of a 6 digit code you will be able to customize it!
-
+- Adding support for custom messages when the code is sent!
 # Credits
 - Me.
 
@@ -83,3 +82,14 @@ Replace `target` with a valid email adress to send the code.
 `verify.verify(Code, correct, incorrect)`
 
 Ok, so the computer will look at the `Code` paramter and check if it matches the code sent. The `correct` parameter is actually a function. if the code matches the code sent, then this function will get executed. Same thing for the `incorrect` function except that will get executed if the code sent does not match the one the user put in.
+
+
+================================================================
+
+`verify.createCode(customCode)`
+
+Just replace the `customCode` parameter with a variable! Use it like this:
+```js
+verify.createCode("myCode") //Create the code
+verify.verify(code) //Verifies the code! If you do not use the customCode function, it will just give you a random 6 digit code
+```
