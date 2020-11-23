@@ -93,3 +93,6 @@ Just replace the `customCode` parameter with a variable! Use it like this:
 verify.createCode("myCode") //Create the code
 verify.verify(code) //Verifies the code! If you do not use the customCode function, it will just give you a random 6 digit code
 ```
+# Known Bugs
+
+- `alert` and `prompt` dont work, we will add support for this sometime! 
