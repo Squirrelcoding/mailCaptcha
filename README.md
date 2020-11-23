@@ -21,7 +21,8 @@ Almost forgot! So here is the code:
 
 NOTE: INSTALL NODEMAILER OR THIS WILL NOT WORK!
 ```js
-var verify = require('mailcaptcha') 
+var verify = require('./mailcaptcha')
+//Add the file to your directory! I tried to make it as an npm package, but sadly it raised many, many errors
 ```
 **Require readline**
 Require `readline` to use as input
