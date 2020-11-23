@@ -96,3 +96,5 @@ verify.verify(code) //Verifies the code! If you do not use the customCode functi
 # Known Bugs
 
 - `alert` and `prompt` dont work, we will add support for this sometime! 
+
+If you notice any bugs, report it to bugs!
