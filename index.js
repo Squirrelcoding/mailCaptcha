@@ -1,4 +1,4 @@
-var verify = require('./easyCaptcha.js')
+var verify = require('./mailCaptcha.js')
 const readline = require("readline");
 const rl = readline.createInterface({
   input: process.stdin,
