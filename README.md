@@ -4,6 +4,8 @@ mailCaptcha is a Nodejs library that helps people by using a captcha. It is very
 # how it works
 So basically it uses Nodemailer and a random number generator to send a random 6 digit code to the user. **No, it does not send your passwords and account data to me!, *feel free to inspect the code!***
 
+# Recent Updates
+- Added support for custom messages! Find out more below!
 # Upcoming Updates
 - Adding support to `alert` and `prompt`
 
@@ -100,7 +102,7 @@ Now you can add custom messages! Here is how to use it:
 ```js
 verify.message("Hello! Here is your verification code: --CODE--")
 ```
-When the message is sent, it will replace `--CODE--` with the code!
+When the message is sent, it will replace `--CODE--` with the code! If you do not want a custom message, just dont call the `message` function! HTML support will also come soon!
 # Known Bugs
 
 - `alert` and `prompt` dont work, we will add support for this sometime! 
