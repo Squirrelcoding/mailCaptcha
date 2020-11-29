@@ -1,5 +1,5 @@
 # mailCaptcha
-mailCaptcha is a Nodejs library that helps people by using a captcha. It is very easy to use! Sadly it is not an NPM package because it simply does not work. It raisess many, many errors
+mailCaptcha is a Nodejs library that helps people by using a captcha. It is very easy to use! Sadly it is not an NPM package because it simply does not work. It raised many, many errors
 
 # how it works
 So basically it uses Nodemailer and a random number generator to send a random 6 digit code to the user. **No, it does not send your passwords and account data to me!, *feel free to inspect the code!***
