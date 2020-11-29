@@ -6,6 +6,7 @@ var transporter = "";
 var emaill = "";
 var passwordd = "";
 var mailOptionss = "";
+var messageSenttt = "";
 var sent = false;
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -16,6 +17,17 @@ function randint(min, max) {
 var code = randint(100000, 1000000);
 exports.createCode = function createCustomCode(customCode) {
    code = customCode
+}
+exports.message = function message(message) {
+	var customMessage = message;
+	var ifCodeIncluded = customMessage.includes("--CODE--");
+	if (ifCodeIncluded == true) {
+	customMessage = customMessage.replace("--CODE--", code);
+	messageSenttt = customMessage;
+	}
+	else if (ifCodeIncluded == false) {
+		console.log("You did not put the code in your message!")
+	}
 }
 exports.authentication = function authentication(email, password) {
 transporter = nodemailer.createTransport({
@@ -34,15 +46,13 @@ exports.sendCode = function sendCode(target) {
   var mailOptions = {
     from: emaill,
     to: target,
-    subject: 'Sending Email using Node.js',
-    text: 'Here is the code: ' + code
+    subject: 'Your Verification Code',
+    text: messageSenttt
   };
   transporter.sendMail(mailOptions, function(error){
     if (error) {
       console.log(error);
-    }/* else {
-      console.log('Email sent Successfuly!');
-    }*/
+    }
   });
 }
 exports.verify = function verify(inputCode, ifCorrectFunction, ifIncorretFunction) {
