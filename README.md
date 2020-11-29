@@ -7,13 +7,12 @@ So basically it uses Nodemailer and a random number generator to send a random 6
 # Upcoming Updates
 - Adding support to `alert` and `prompt`
 
-- Adding support for custom messages when the code is sent!
 # Credits
 - Me.
 
 
 # How to use!
-Almost forgot! So here is the code:
+Almost forgot! So here is the how to use it:
 
 **Install/require**
 
@@ -92,8 +91,17 @@ Just replace the `customCode` parameter with a variable! Use it like this:
 verify.createCode("myCode") //Create the code
 verify.verify(code) //Verifies the code! If you do not use the customCode function, it will just give you a random 6 digit code
 ```
+================================================================
+
+`verify.message(message)`
+
+Now you can add custom messages! Here is how to use it:
+```js
+verify.message("Hello! Here is your verification code: --CODE--")
+```
+When the message is sent, it will replace `--CODE--` with the code!
 # Known Bugs
 
 - `alert` and `prompt` dont work, we will add support for this sometime! 
 
-If you notice any bugs, report it to bugs!
+If you notice any bugs, report it to bugs! You can also send feedback in the `issues` section!
