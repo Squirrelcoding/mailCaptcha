@@ -25,7 +25,7 @@ var verify = require('./mailcaptcha')
 //Add the file to your directory!
 ```
 **Require readline**
-Require `readline` to use as input
+Require `readline` to use as input, you can also use other methods of input besides `prompt` or `alert`, they will not work
  ```js
  const readline = require("readline");
 const rl = readline.createInterface({
