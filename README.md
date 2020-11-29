@@ -7,6 +7,7 @@ So basically it uses Nodemailer and a random number generator to send a random 6
 # Upcoming Updates
 - Adding support to `alert` and `prompt`
 
+- Adding support for HTML messages!
 # Credits
 - Me.
 
