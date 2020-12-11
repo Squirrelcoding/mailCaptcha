@@ -47,7 +47,7 @@ exports.sendCode = function sendCode(target) {
     from: emaill,
     to: target,
     subject: 'Your Verification Code',
-    text: messageSenttt
+    html: messageSenttt
   };
   transporter.sendMail(mailOptions, function(error){
     if (error) {
