@@ -1,8 +1,8 @@
 # mailCaptcha
-mailCaptcha is a Nodejs library that helps people by using a captcha. It is very easy to use! Sadly it is not an NPM package because it simply does not work. It raised many, many errors
+mailCaptcha is a Nodejs library that helps people by using a captcha. It is very easy to use! Just install, learn and code!
 
 # how it works
-So basically it uses Nodemailer and a random number generator to send a random 6 digit code to the user. **No, it does not send your passwords and account data to me!, *feel free to inspect the code!***
+So basically it uses Nodemailer and a random number generator to send a random 6 digit code to the user. **No, it does not send your passwords and account data to me!, *feel free to inspect the source code!***
 
 # Recent Updates
 - Added support for custom messages! Find out more below!
@@ -21,8 +21,7 @@ Almost forgot! So here is the how to use it:
 
 NOTE: INSTALL NODEMAILER OR THIS WILL NOT WORK!
 ```js
-var verify = require('./mailcaptcha')
-//Add the file to your directory!
+var verify = require('softsquirrel_mailcaptcha')
 ```
 **Require readline**
 Require `readline` to use as input, you can also use other methods of input besides `prompt` or `alert`, they will not work
