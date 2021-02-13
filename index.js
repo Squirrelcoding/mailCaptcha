@@ -1,21 +1,44 @@
-var verify = require('./mailCaptcha.js')
-const readline = require("readline");
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-function correct() {
-  console.log('Verified!')
+var nodemailer = require("nodemailer"),
+    transporter = "",
+    emaill = "",
+    passwordd = "",
+    daSubject = "Your Verification Code",
+    mailOptionss = "",
+    messageSenttt = "",
+    sent = !1;
+
+function randint(e, t) {
+    return Math.floor(Math.random() * (t - e)) + e
 }
-function incorrect() {
-  console.log('Incorrect Code')
-}
-var email = process.env.EMAIL;
-var password = process.env.PASSWORD;
-verify.authentication(email, password); //Alt account
-rl.question("Enter your email:", ans => {
-  verify.sendCode(ans)
-  rl.question("Enter the Code we sent you :", ans => {
-    verify.verify(ans, correct, incorrect)
-  })
-})
+var code = randint(1e5, 1e6);
+exports.createCode = function(e) {
+    code = e
+}, exports.message = function(e) {
+    var t = e,
+        o = t.includes("--CODE--");
+    1 == o ? (t = t.replace("--CODE--", code), messageSenttt = t) : 0 == o && console.log("You did not put the code in your message!")
+}, exports.authentication = function(e, t) {
+    transporter = nodemailer.createTransport({
+        service: "gmail",
+        port: 587,
+        secure: !0,
+        auth: {
+            user: e,
+            pass: t
+        }
+    }), emaill = e, passwordd = t
+}, exports.subject = function(e) {
+    daSubject = e
+}, exports.sendCode = function(e) {
+    var t = {
+        from: emaill,
+        to: e,
+        subject: daSubject,
+        html: messageSenttt
+    };
+    transporter.sendMail(t, function(e) {
+        e && console.log(e)
+    })
+}, exports.verify = function(e, t, o) {
+    (e == code ? t : o)()
+};
